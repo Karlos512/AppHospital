@@ -38,13 +38,6 @@ public class DoctorController {
         return doctorService.findById(id);
     }
 
-    // @PutMapping("/doctor/{id}")
-    // public DoctorModel ModificarDoctor(@RequestBody DoctorModel doctor, @PathVariable Integer id){
-    //     DoctorModel doctorAct = doctorService.findById(id);
-    //     doctorAct.setDoctor(doctor.getDoctor());
-    //     return doctorService.save(doctorAct);
-    // }
-
     @DeleteMapping("/doctor/{id}")
     public void EliminarDoctor(@PathVariable Integer id){
         doctorService.delete(id);
